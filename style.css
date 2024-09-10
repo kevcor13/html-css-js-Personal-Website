@@ -4,6 +4,9 @@
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
  }
+ html{
+   scroll-behavior: smooth;
+ }
  body{
     background: #080800;
     color: #fff;
@@ -250,6 +253,7 @@ display: flex;
    background: #ff004f;
 
 }
+
 /* CONTACT */
 
 .contact-left{
@@ -313,4 +317,10 @@ form input, form textarea{
 }
 .copyright i{
    color: #ff004f;
+}
+
+#smg {
+   color: #61b752;
+   margin-top: -40px;
+   display: block;
 }
