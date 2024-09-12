@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="device-width, initial-scale=1.0">
+        <title>Projects</title>
+        <link rel="stylesheet" href="projectStyle.css">
+        <script src="https://kit.fontawesome.com/c3ad55626e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="index.html">Portfolio</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="index.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="coffee-kiosk">
+            <div class="container">
+                <div class="row-2">
+                    <div class="about-coffee">
+                        <h1 class="sub-title">Coffee Kiosk</h1>
+                        <div class="tab-titles">
+                            <p class="coffee-links active-link2" onclick="opentab2('Description2')">Description</p>
+                            <p class="coffee-links" onclick="opentab2('Tools2')">Tools</p>
+                            <p class="coffee-links" onclick="opentab2('Objective2')">Objective</p>
+                        </div>
+                        <div class="coffee-content active-tab2" id="Description2">
+                            <ul>
+                                <p>
+                                    Coffee Kiosk is all about...
+                                </p>
+                            </ul>
+                        </div>
+                        <div class="coffee-content" id="Tools2">
+                            <ul>
+                                <p>
+                                    Tools used are...
+                                </p>
+                            </ul>
+                        </div>
+                        <div class="coffee-content" id="Objective2">
+                            <ul>
+                                <p>
+                                    The Objective was...
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="about-col-1">
+                        <img src="/Pictures/Coffee picture.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="/Pictures/icon.ankyr.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">Ankyr Application</h1>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Description')"> Description </p>
+                            <p class="tab-links"  onclick="opentab('Tools')">Tools</p>
+                            <p class="tab-links"  onclick="opentab('Objective')">Objective</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Description">
+                            <ul>
+                                <p> ankyr is all about...</p>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Tools">
+                            <ul>
+                                <p>The tools I used are...</p>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Objective">
+                            <ul>
+                                <p>
+                                    The main Objective of this app is...
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+        </script>
+        <script>
+            var coffeeLinks = document.getElementsByClassName("coffee-links")
+            var coffeeContents = document.getElementsByClassName("coffee-content")
+            function opentab2(tabname){
+                for(coffeeLink of coffeeLinks){
+                    coffeeLink.classList.remove("active-link2")
+                }
+                for(coffeeContent of coffeeContents){
+                    coffeeContent.classList.remove("active-tab2")
+                }
+                event.currentTarget.classList.add("active-link2")
+                document.getElementById(tabname).classList.add("active-tab2")
+            }
+        </script>
+    </body>
+</html>
