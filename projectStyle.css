@@ -129,6 +129,50 @@
  .tab-contents.active-tab{
     display: block;
  }
+ /* Personal Projects */
+#personal-website{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row-3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.personal-link{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.personal-link::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.personal-link.active-link3::after{
+    width: 50%;
+}
+.personal-content ul li{
+    list-style: none;
+    margin: 10px;
+}
+.personal-content ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+.personal-content{
+    display: none;
+}
+.personal-content.active-tab3{
+    display: block;
+}
 /* coffee project */
 #coffee-kiosk{
     padding: 80px 0;

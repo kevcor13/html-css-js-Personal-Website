@@ -22,6 +22,79 @@
                 </nav>
             </div>
         </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="/Pictures/icon.ankyr.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">Ankyr Application</h1>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Description')"> Description </p>
+                            <p class="tab-links"  onclick="opentab('Tools')">Tools</p>
+                            <p class="tab-links"  onclick="opentab('Objective')">Objective</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Description">
+                            <ul>
+                                <p> ankyr is all about...</p>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Tools">
+                            <ul>
+                                <p>The tools I used are...</p>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Objective">
+                            <ul>
+                                <p>
+                                    The main Objective of this app is...
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="personal-website">
+            <div class="container">
+                <div class="row-3">
+                    <div class="about-col-1">
+                        <img src="/Pictures/codingImage.HEIC">
+                    </div>
+                    <div class="about-personal">
+                        <h1 class="sub-title">Personal Website</h1>
+                        <div class="tab-titles">
+                            <p class="personal-link active-link3" onclick="opentab3('Description3')">Description</p>
+                            <p class="personal-link" onclick="opentab3('Tools3')">Tools</p>
+                            <p class="personal-link" onclick="opentab3('Objective3')">Objective</p>
+                        </div>
+                        <div class="personal-content active-tab3" id="Description3">
+                            <ul>
+                                <p>
+                                    Personal Website is all about...
+                                </p>
+                            </ul>
+                        </div>
+                        <div class="personal-content" id="Tools3">
+                            <ul>
+                                <p>
+                                    Tools I used for personal Website are...
+                                </p>
+                            </ul>
+                        </div>
+                        <div class="personal-content" id="Objective3">
+                            <ul>
+                                <p>
+                                    Objective for making Personal Website are...
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="coffee-kiosk">
             <div class="container">
                 <div class="row-2">
@@ -60,43 +133,6 @@
                 </div>
             </div>
         </div>
-
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="/Pictures/icon.ankyr.jpg">
-                    </div>
-                    <div class="about-col-2">
-                        <h1 class="sub-title">Ankyr Application</h1>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('Description')"> Description </p>
-                            <p class="tab-links"  onclick="opentab('Tools')">Tools</p>
-                            <p class="tab-links"  onclick="opentab('Objective')">Objective</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="Description">
-                            <ul>
-                                <p> ankyr is all about...</p>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="Tools">
-                            <ul>
-                                <p>The tools I used are...</p>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="Objective">
-                            <ul>
-                                <p>
-                                    The main Objective of this app is...
-                                </p>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-      
         <script>
             var tablinks = document.getElementsByClassName("tab-links");
             var tabcontents = document.getElementsByClassName("tab-contents");
@@ -123,6 +159,20 @@
                 }
                 event.currentTarget.classList.add("active-link2")
                 document.getElementById(tabname).classList.add("active-tab2")
+            }
+        </script>
+        <script>
+            var personalLinks = document.getElementsByClassName("personal-link")
+            var personalContents = document.getElementsByClassName("personal-content")
+            function opentab3(tabname){
+                for(personalLink of personalLinks){
+                    personalLink.classList.remove("active-link3")
+                }
+                for(personalContent of personalContents){
+                    personalContent.classList.remove("active-tab3")
+                }
+                event.currentTarget.classList.add("active-link3")
+                document.getElementById(tabname).classList.add("active-tab3")
             }
         </script>
     </body>
